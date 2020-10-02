@@ -9,11 +9,10 @@ $paragrafo = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, word sed
 
 $badwords = $_GET["word"];
 
-// $badwords = "word";
-
 echo strlen($paragrafo);
 
-$nuovoParagrafo = str_replace($badwords, "***", $paragrafo);
+
+$nuovoParagrafo = str_replace($badwords, "***", $_GET["word"]);
 ?>
 
 
@@ -25,7 +24,7 @@ $nuovoParagrafo = str_replace($badwords, "***", $paragrafo);
   </head>
   <body>
     <h1> <?php echo $titolo; ?></h1>
-    <p> <?php echo $nuovoParagrafo; ?> </p>
+    <p> <?php echo $paragrafo . " ". $nuovoParagrafo; ?> </p>
 
   </body>
 </html>
