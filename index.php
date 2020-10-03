@@ -11,10 +11,8 @@ $badwords = $_GET["word"];
 
 echo strlen($paragrafo);
 
-
-$star = str_replace($badwords, "***", $_GET["word"]);
+$star = str_ireplace($badwords, "***", $paragrafo);
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -24,8 +22,8 @@ $star = str_replace($badwords, "***", $_GET["word"]);
   </head>
   <body>
     <h1> <?php echo $titolo; ?></h1>
-    <h4><?php echo  $star; ?></h4>
     <p> <?php echo $paragrafo; ?> </p>
+    <p><?php echo  $star; ?></p>
 
   </body>
 </html>
